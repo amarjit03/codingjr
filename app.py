@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-# Load .env variables
-load_dotenv()
+# # Load .env variables
+# load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MODEL = os.getenv("MODEL", "llama-3.3-70b-versatile")
 
@@ -13,6 +13,7 @@ st.set_page_config(page_title="Groq Chat App", page_icon="🤖")
 
 st.title("🤖 Chat with Groq AI")
 st.write("Type a message to talk with the AI model powered by Groq.")
+st.write("Created by Diya Khandelwal")
 
 # Initialize session state
 if "messages" not in st.session_state:
